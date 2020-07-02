@@ -82,6 +82,6 @@ app.get('*',(req,res)=>{
     res.render('404',{title:'404',message:'Page Not Found',name:'Arnab'})
 })
 
-app.listen(3000,()=>{
+app.listen((process.env.PORT || 3000),()=>{
     console.log("server is up on port 3000")
 })
