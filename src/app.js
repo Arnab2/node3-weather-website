@@ -53,7 +53,8 @@ app.get('/weather',(req,res)=>{
                     longitude:data.longitude,
                     place:data.location,
                     weather:weatherData.desc,
-                    temp:weatherData.temparature 
+                    temp:weatherData.temparature,
+                    icon:weatherData.icon
                 })
             }
         })

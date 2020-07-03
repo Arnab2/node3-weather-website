@@ -14,7 +14,7 @@ const saerchElement=document.querySelector('input')
 const messageOne=document.querySelector('#message-1')
 
 const messageTwo=document.querySelector('#message-2')
-
+const image=document.querySelector("#image")
 
 weatherForm.addEventListener('submit',(event)=>{
   event.preventDefault();
@@ -29,9 +29,12 @@ weatherForm.addEventListener('submit',(event)=>{
     if(data.error)
    messageOne.textContent=data.error
   else
-  {
+  {const icon=data.icon
+   const imgUrl="http://openweathermap.org/img/wn/"+icon+"@2x.png";
    messageOne.textContent="The Temparature in "+location+" is "+data.temp+" digree "
    messageTwo.textContent="Weather is "+data.weather 
+   image.src=imgUrl
+   image.style.width="100px"
 }
     })
 })

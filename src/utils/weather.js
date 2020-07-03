@@ -13,7 +13,8 @@ request({url:url , json:true},(err,res)=>{
     callback(undefined,{
         city:res.body.name,
        temparature:res.body.main.temp,
-       desc:res.body.weather[0].description 
+       desc:res.body.weather[0].description ,
+       icon:res.body.weather[0].icon
     })
 
 })
